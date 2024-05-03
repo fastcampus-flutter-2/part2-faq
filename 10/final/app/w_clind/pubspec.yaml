@@ -1,0 +1,40 @@
+name: w_clind
+description: A new Flutter project.
+version: 1.0.0+1
+publish_to: none
+
+environment:
+  sdk: 3.2.6
+  flutter: 3.16.9
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  data:
+    path: ../data
+  domain:
+    path: ../domain
+  presentation:
+    path: ../presentation
+  di:
+    path: ../di
+
+  core_flutter_bloc:
+    path: ../../core/flutter_bloc
+  core_util:
+    path: ../../core/util
+
+  feature_community:
+    path: ../../feature/community/target/clind
+  feature_w_my:
+    path: ../../feature/my/target/w_clind
+
+  tool_clind_network:
+    path: ../../tool/clind/network
+  tool_clind_theme:
+    path: ../../tool/clind/theme
+
+  flutter_native_splash: 2.4.0

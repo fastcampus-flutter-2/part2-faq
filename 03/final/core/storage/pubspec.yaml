@@ -1,0 +1,10 @@
+name: core_storage
+description: core storage package.
+publish_to: none
+
+environment:
+  sdk: 3.3.4
+  flutter: 3.19.6
+
+dependencies:
+  shared_preferences: 2.2.3

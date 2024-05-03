@@ -1,0 +1,26 @@
+name: feature_community_example
+description: feature community example.
+publish_to: none
+
+environment:
+  sdk: 3.2.6
+  flutter: 3.16.9
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  feature_community:
+    path: ../clind
+  feature_search:
+    path: ../../../search/target/clind
+
+  tool_clind_network:
+    path: ../../../../tool/clind/network
+  tool_clind_theme:
+    path: ../../../../tool/clind/theme
+
+  core_util:
+    path: ../../../../core/util

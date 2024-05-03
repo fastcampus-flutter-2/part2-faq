@@ -1,0 +1,11 @@
+name: domain
+description: clind domain package.
+publish_to: none
+
+environment:
+  sdk: 3.3.4
+  flutter: 3.19.6
+
+dependencies:
+  core_util:
+    path: ../../core/util

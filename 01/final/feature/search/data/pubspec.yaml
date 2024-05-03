@@ -1,0 +1,19 @@
+name: search_data
+description: feature search data package.
+publish_to: none
+
+environment:
+  sdk: 3.3.4
+  flutter: 3.19.6
+
+dependencies:
+  search_domain:
+    path: ../domain
+
+  core_storage:
+    path: ../../../core/storage
+  core_util:
+    path: ../../../core/util
+
+  tool_clind_network:
+    path: ../../../tool/clind/network

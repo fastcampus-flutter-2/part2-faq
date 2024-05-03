@@ -1,0 +1,89 @@
+### Before ###
+before_each do | lane, options |
+  if options[:flavor] == "prod"
+    @configuration = "Release-prod"
+    @flavor = "prod"
+    @target = "lib/main_real.dart"
+    @firebase_app_id = "1:691566795007:ios:4d8fc8ed348610865994ca"
+    @export_options = {
+      :method => "app-store",
+      :signingStyle => "automatic",
+      :uploadSymbols => true
+    }
+  elsif options[:flavor] == "inhouse"
+    @configuration = "Profile-inhouse"
+    @flavor = "inhouse"
+    @target = "lib/main.dart"
+    @firebase_app_id = "1:691566795007:ios:21d8214b8c13296a5994ca"
+    @export_options = {
+      :method => "ad-hoc",
+      :signingStyle => "automatic",
+    }
+  end
+end
+
+lane :flutter_setup do | options |
+  begin
+    flutter_setup
+  rescue => exception
+    UI.error(exception.message)
+  end
+end
+
+def flutter_setup
+  sh("melos run clean")
+  sh("melos run pub_get")
+end
+
+lane :ios_setup do | options |
+  begin
+    ios_setup
+  rescue => exception
+    UI.error(exception.message)
+  end
+end
+
+def ios_setup
+  sh("cd ../ && rm -rf Podfile.lock && pod deintegrate && pod cache clean --all && pod install --repo-update")
+end
+
+lane :build do | options |
+  begin
+    build_ipa
+  rescue => exception
+    UI.error(exception.message)
+  end
+end
+
+def build_ipa
+  gym(
+    workspace: "Runner.xcworkspace",
+    scheme: @flavor,
+    configuration: @configuration,
+    silent: true,
+    clean: true,
+    include_bitcode: false,
+    archive_path: "./build/ios/ipa/clind.xcarchive",
+    output_directory: "./build/ios/ipa",
+    output_name: "clind.ipa",
+    xcargs: "-allowProvisioningUpdates",
+    export_xcargs: "-allowProvisioningUpdates",
+    export_options: @export_options,
+  )
+end
+
+lane :deploy do |options|
+  begin
+    deploy_ipa
+  rescue => exception
+    UI.error(exception.message)
+  end
+end
+
+def deploy_ipa
+  firebase_app_distribution(
+    app: @firebase_app_id,
+    testers: "sh9306@gmail.com",
+    ipa_path:"../build/ios/ipa/clind.ipa",
+  )
+end

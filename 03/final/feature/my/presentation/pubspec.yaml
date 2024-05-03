@@ -1,0 +1,19 @@
+name: my_presentation
+description: feature my presentation package.
+publish_to: none
+
+environment:
+  sdk: 3.3.4
+  flutter: 3.19.6
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  my_domain:
+    path: ../domain
+
+  core_bloc:
+    path: ../../../core/bloc
+  core_util:
+    path: ../../../core/util

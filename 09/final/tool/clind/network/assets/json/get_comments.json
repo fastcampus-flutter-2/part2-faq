@@ -1,0 +1,152 @@
+[
+  {
+    "id": "channel_0",
+    "postId": "post_0",
+    "user": {
+      "id": "other_profile_0",
+      "imageUrl": "https://source.unsplash.com/random/300×300",
+      "company": "Pouros, Aufderhar and Spinka",
+      "name": "Velda Lindgren",
+      "postCount": 0,
+      "commentCount": 0,
+      "likeCount": 0
+    },
+    "content": "BioPharm America 2011",
+    "createdAt": 1715140900392
+  },
+  {
+    "id": "channel_1",
+    "postId": "post_0",
+    "user": {
+      "id": "other_profile_1",
+      "imageUrl": "https://source.unsplash.com/random/300×300",
+      "company": "Swift LLC",
+      "name": "Dr Jett Carroll",
+      "postCount": 0,
+      "commentCount": 0,
+      "likeCount": 0
+    },
+    "content": "Exploration Production Technology Summit 2011",
+    "createdAt": 1715140840392
+  },
+  {
+    "id": "channel_2",
+    "postId": "post_0",
+    "user": {
+      "id": "other_profile_2",
+      "imageUrl": "https://source.unsplash.com/random/300×300",
+      "company": "Eichmann-Huel",
+      "name": "Clint Ruecker Jr.",
+      "postCount": 0,
+      "commentCount": 0,
+      "likeCount": 0
+    },
+    "content": "Platts 16th annual Mexican Energy conference",
+    "createdAt": 1715140780392
+  },
+  {
+    "id": "channel_3",
+    "postId": "post_0",
+    "user": {
+      "id": "other_profile_3",
+      "imageUrl": "https://source.unsplash.com/random/300×300",
+      "company": "Waelchi, Konopelski and Kutch",
+      "name": "Miss Abbigail Runolfsdottir Jr.",
+      "postCount": 0,
+      "commentCount": 0,
+      "likeCount": 0
+    },
+    "content": "Open Networking Summit 2012",
+    "createdAt": 1715140720392
+  },
+  {
+    "id": "channel_4",
+    "postId": "post_0",
+    "user": {
+      "id": "other_profile_4",
+      "imageUrl": "https://source.unsplash.com/random/300×300",
+      "company": "Ziemann-Trantow",
+      "name": "Naomi Jones",
+      "postCount": 0,
+      "commentCount": 0,
+      "likeCount": 0
+    },
+    "content": "Reserve Estimation for Unconventional Resources 2012",
+    "createdAt": 1715140660392
+  },
+  {
+    "id": "channel_5",
+    "postId": "post_0",
+    "user": {
+      "id": "other_profile_5",
+      "imageUrl": "https://source.unsplash.com/random/300×300",
+      "company": "Wyman-Wolf",
+      "name": "Chance Abshire",
+      "postCount": 0,
+      "commentCount": 0,
+      "likeCount": 0
+    },
+    "content": "LatAm HSE in Oil, Gas and Petrochemicals",
+    "createdAt": 1715140600392
+  },
+  {
+    "id": "channel_6",
+    "postId": "post_0",
+    "user": {
+      "id": "other_profile_6",
+      "imageUrl": "https://source.unsplash.com/random/300×300",
+      "company": "Abernathy, Huel and Ritchie",
+      "name": "Asia Conroy",
+      "postCount": 0,
+      "commentCount": 0,
+      "likeCount": 0
+    },
+    "content": "Carbon Markets Mexico Central America",
+    "createdAt": 1715140540392
+  },
+  {
+    "id": "channel_7",
+    "postId": "post_0",
+    "user": {
+      "id": "other_profile_7",
+      "imageUrl": "https://source.unsplash.com/random/300×300",
+      "company": "Feest LLC",
+      "name": "Wilhelmine Bogan",
+      "postCount": 0,
+      "commentCount": 0,
+      "likeCount": 0
+    },
+    "content": "Datacentre Investment Forum",
+    "createdAt": 1715140480392
+  },
+  {
+    "id": "channel_8",
+    "postId": "post_0",
+    "user": {
+      "id": "other_profile_8",
+      "imageUrl": "https://source.unsplash.com/random/300×300",
+      "company": "Mosciski-Mante",
+      "name": "Alysha Maggio",
+      "postCount": 0,
+      "commentCount": 0,
+      "likeCount": 0
+    },
+    "content": "Dow Jones Global Compliance Symposium 2011",
+    "createdAt": 1715140420392
+  },
+  {
+    "id": "channel_9",
+    "postId": "post_0",
+    "user": {
+      "id": "other_profile_9",
+      "imageUrl": "https://source.unsplash.com/random/300×300",
+      "company": "Conn-Hermann",
+      "name": "Ms. Lavern Moore",
+      "postCount": 0,
+      "commentCount": 0,
+      "likeCount": 0
+    },
+    "content": "Device Master Record Device History Record a requirements, contents and implementation - Webinar",
+    "createdAt": 1715140360392
+  }
+]

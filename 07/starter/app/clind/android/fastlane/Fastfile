@@ -1,0 +1,67 @@
+### Before ###
+before_each do | lane, options |
+  if options[:flavor] == "prod"
+    @build_type = "release"
+    @flavor = "prod"
+    @target = "lib/main_real.dart"
+    @firebase_app_id = "1:691566795007:android:58d60368bac795ef5994ca"
+  elsif options[:flavor] == "inhouse"
+    @build_type = "profile"
+    @flavor = "inhouse"
+    @target = "lib/main.dart"
+    @firebase_app_id = "1:691566795007:android:177a7289626506535994ca"
+  end
+end
+
+lane :flutter_setup do | options |
+  begin
+    flutter_setup
+  rescue => exception
+    UI.error(exception.message)
+  end
+end
+
+def flutter_setup
+  sh("melos run clean")
+  sh("melos run pub_get")
+end
+
+lane :android_setup do | options |
+  begin
+    android_setup
+  rescue => exception
+    UI.error(exception.message)
+  end
+end
+
+def android_setup
+  sh("cd ../ && ./gradlew clean")
+end
+
+lane :build do | options |
+  begin
+    build_apk
+  rescue => exception
+    UI.error(exception.message)
+  end
+end
+
+def build_apk
+  sh("cd ../ && fvm flutter build apk --#{@build_type} --flavor #{@flavor} --target #{@target} --verbose")
+end
+
+lane :deploy do |options|
+  begin
+    deploy_apk
+  rescue => exception
+    UI.error(exception.message)
+  end
+end
+
+def deploy_apk
+  firebase_app_distribution(
+    app: @firebase_app_id,
+    testers: "sh9306@gmail.com",
+    apk_path: "../build/app/outputs/flutter-apk/app-#{@flavor}-#{@build_type}.apk",
+  )
+end

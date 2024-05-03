@@ -1,0 +1,34 @@
+[
+  {
+    "id": "notification_0",
+    "title": "공지사항",
+    "content": "어떤 게시글이 있는지 확인해보세요.",
+    "route": "/community?type=normal",
+    "createdAt": 1715140859100,
+    "type": "NOTICE"
+  },
+  {
+    "id": "notification_1",
+    "title": "공지사항",
+    "content": "많은 인기 게시글이 작성되었어요. 어떤 인기 게시글이 있는지 확인해보세요.",
+    "route": "/community?type=popular",
+    "createdAt": 1715140739101,
+    "type": "NOTICE"
+  },
+  {
+    "id": "notification_2",
+    "title": "라운지 주간베스트!",
+    "content": "\"능률 지원 마십시오.\"",
+    "route": "/community/post?id=post_0",
+    "createdAt": 1715054519101,
+    "type": "ALARM"
+  },
+  {
+    "id": "notification_3",
+    "title": "토픽 주간베스트!",
+    "content": "\"코로나로 인한 회사생활\"",
+    "route": "/community/post?id=post_1",
+    "createdAt": 1714968119101,
+    "type": "ALARM"
+  }
+]
